@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "choco": "^0.2.1",
+    "install": "^0.13.0",
+    "sass": "^1.77.8",
     "vue": "^3.4.35"
   },
   "devDependencies": {
