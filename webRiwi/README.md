@@ -17,16 +17,17 @@ Riwi necesita una plataforma de conectividad profesional diseñada específicame
 - **SASS**: Usado para la estilización de las interfaces, permitiendo una gestión más eficiente de los estilos a través de variables, mixins y anidaciones.
 
 ## Capturas de Pantalla
-1. **Perfil General**  
+
+- **Perfil General**
 ![Perfil General](../View/proyectRiwi1/principalVIew.png)
 
-2.**Equipos**  
+- **Equipos**  
 ![Equipos](../View/proyectRiwi1/teamView.png)
 
-3. **Proyectos**  
+- **Proyectos**  
 ![Proyectos](ruta/a/la/imagen-proyectos.png)
 
-4. **Conexiones**  
+- **Conexiones**  
 ![Conexiones](../View/proyectRiwi1/connectView.png)
 
 ## Instalación y Configuración
