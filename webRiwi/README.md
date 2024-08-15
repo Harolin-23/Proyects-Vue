@@ -4,17 +4,6 @@
 
 Riwi necesita una plataforma de conectividad profesional diseñada específicamente para sus desarrolladores. El objetivo principal es mejorar la experiencia y el manejo de la información del usuario dentro de su plataforma. Este proyecto implica la creación de un conjunto de interfaces de usuario que permitan a los usuarios gestionar sus perfiles, conexiones, proyectos y equipos de manera eficiente.
 
-## Objetivo
-
-El objetivo de este proyecto es desarrollar cuatro interfaces principales para el perfil de usuario de Riwi, que incluyen:
-
-1. **Perfil General**
-2. **Conexiones**
-3. **Proyectos**
-4. **Equipos**
-
-Estas interfaces deben ser implementadas con precisión, siguiendo los layouts proporcionados, utilizando Vue.js para la estructura del proyecto y SASS para la estilización.
-
 ## Estructura del Proyecto
 
 - **Perfil General**: Interfaz que muestra la información básica del usuario, incluyendo detalles personales, foto de perfil, y opciones de personalización.
@@ -28,9 +17,6 @@ Estas interfaces deben ser implementadas con precisión, siguiendo los layouts p
 - **SASS**: Usado para la estilización de las interfaces, permitiendo una gestión más eficiente de los estilos a través de variables, mixins y anidaciones.
 
 ## Capturas de Pantalla
-
-A continuación se mostrarán capturas de pantalla de las interfaces desarrolladas para una mejor visualización del proyecto:
-
 1. **Perfil General**  
    ![Perfil General](../View/proyectRiwi1/principalVIew.png)
 
