@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div class="banner-fot">
-
+        <img src="../../assets//34348.jpg" alt="">
     </div>
     <div class="profile-card">
       <div class="profile-image">
@@ -9,6 +9,12 @@
       </div>
      <div class="name-links">
         <h2>{{ nombre }}</h2>
+        <div class="container-links">
+            <p><i class="fa-solid fa-palette"></i>Coder</p>
+            <p><i class="fa-solid fa-location-dot"></i>Medellin</p>
+
+            <p><i class="fa-regular fa-calendar"></i>Joinded Ayer</p>
+        </div>
      </div>
       
   </div>
@@ -37,6 +43,8 @@ export default defineComponent({
 <style scoped>
 
 .banner{
+  box-shadow:
+  0.3em 0.3em 1em rgba(0, 0, 0, 0.096);
   display: flex;
   width: 100%;
   height: 30vh;
@@ -45,7 +53,13 @@ export default defineComponent({
   .banner-fot{
     height: 60%;
     width: 100%;
-    background-color: green;
+    transition: 0.4s;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
   }
   .profile-card{
     width: 100%;
@@ -56,8 +70,6 @@ export default defineComponent({
   }
 
 }
-
-
 .profile-card {
   display: flex;
   object-fit: cover;
@@ -73,6 +85,25 @@ export default defineComponent({
     padding-left: 12px;
     width: 400px;
     height: 100%;
+    font-size: calc(0.3em + 1vw);
+      .container-links{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        p{
+          display: flex;
+          gap: 10px;
+          width: 168px;
+          font-size: calc(0.1em + 1vw);
+          color:rgba(0, 0, 0, 0.363);
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover{
+            color: blueviolet;
+          }
+        }
+      }
     
   }
 
