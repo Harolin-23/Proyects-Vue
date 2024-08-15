@@ -25,31 +25,31 @@
           {
             name: "Cecilia Payne",
             connectionCount: 45,
-            imageUrl: "https://via.placeholder.com/40",
+            imageUrl: "https://th.bing.com/th/id/OIF.CvV7XjFL7udxchu0seHHAg?rs=1&pid=ImgDetMain",
             isConnected: false,
           },
           {
             name: "Curtis Fletcher",
             connectionCount: 1320,
-            imageUrl: "https://via.placeholder.com/40",
+            imageUrl: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2019/07/Olivier_1500_Trptch.jpg",
             isConnected: true,
           },
           {
             name: "Alice Stone",
             connectionCount: 125,
-            imageUrl: "https://via.placeholder.com/40",
+            imageUrl: "https://th.bing.com/th/id/OIP.SWK8fz4QyH_JCef94HoJJAHaLH?rs=1&pid=ImgDetMain",
             isConnected: false,
           },
           {
             name: "Darrell Barnes",
             connectionCount: 456,
-            imageUrl: "https://via.placeholder.com/40",
+            imageUrl: "https://th.bing.com/th/id/R.0b502163be32783eb1a8afd78779171b?rik=hJH5DpLJ2gkdKg&riu=http%3a%2f%2fwww.brainbows.com%2fimages%2fteam%2fJF3.jpg&ehk=zfIA6nSrlU4Y202sRq%2bqsClkpySVNRBN7OIi0lmJM8M%3d&risl=&pid=ImgRaw&r=0",
             isConnected: true,
           },
           {
             name: "Eugenia Moore",
             connectionCount: 1200,
-            imageUrl: "https://via.placeholder.com/40",
+            imageUrl: "https://th.bing.com/th/id/R.cd486d08ca9fd5fb3eb9e24c78400332?rik=H6OBGFx7G%2bwGQw&pid=ImgRaw&r=0",
             isConnected: true,
           },
         ],
@@ -91,6 +91,8 @@
           border-radius: 50%;
           width: 40px;
           height: 40px;
+          object-fit: cover;
+          object-position: center center;
         }
       }
   

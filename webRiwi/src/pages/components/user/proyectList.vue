@@ -62,14 +62,14 @@
         itemsPerPage: 5,
         projects: [
           {
-            icon: "path/to/icon1.png",
+            icon: "https://th.bing.com/th/id/R.d6881ae716771c27046ab721b1b522a2?rik=aoW60Lnm1FP8vg&pid=ImgRaw&r=0",
             name: "BGC eCommerce App",
             type: "React Project",
             leader: "Eileen",
             team: [
-              { avatar: "path/to/avatar1.png", name: "John" },
-              { avatar: "path/to/avatar2.png", name: "Jane" },
-              { avatar: "path/to/avatar3.png", name: "Doe" },
+              { avatar: "https://th.bing.com/th/id/R.cd486d08ca9fd5fb3eb9e24c78400332?rik=H6OBGFx7G%2bwGQw&pid=ImgRaw&r=0", name: "John" },
+              { avatar: "https://th.bing.com/th/id/R.0b502163be32783eb1a8afd78779171b?rik=hJH5DpLJ2gkdKg&riu=http%3a%2f%2fwww.brainbows.com%2fimages%2fteam%2fJF3.jpg&ehk=zfIA6nSrlU4Y202sRq%2bqsClkpySVNRBN7OIi0lmJM8M%3d&risl=&pid=ImgRaw&r=0", name: "Jane" },
+              { avatar: "https://th.bing.com/th/id/OIF.CvV7XjFL7udxchu0seHHAg?rs=1&pid=ImgDetMain", name: "Doe" },
             ],
             progress: 78,
           },

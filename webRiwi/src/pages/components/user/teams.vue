@@ -24,35 +24,35 @@
           {
             name: "React Developers",
             members: 72,
-            iconUrl: "https://via.placeholder.com/40",
+            iconUrl: "https://media.sketchfab.com/models/76174ceeba96487f9863f974636f641e/thumbnails/d0782775c3a046cfb6e77273956ec12c/421dcee6756f4ab3966d219ed6e49e1d.jpeg",
             category: "Developer",
             categoryClass: "developer"
           },
           {
             name: "Support Team",
             members: 122,
-            iconUrl: "https://via.placeholder.com/40",
+            iconUrl: "https://th.bing.com/th/id/OIF.3ZIjCurp9IUTJqOtRfPRWQ?rs=1&pid=ImgDetMain",
             category: "Support",
             categoryClass: "support"
           },
           {
             name: "UI Designer",
             members: 7,
-            iconUrl: "https://via.placeholder.com/40",
+            iconUrl: "https://th.bing.com/th/id/OIP.SxsNJ5tzhgvDtIIreT1ibQHaEK?rs=1&pid=ImgDetMain",
             category: "Designer",
             categoryClass: "designer"
           },
           {
             name: "Vue.js Developers",
             members: 289,
-            iconUrl: "https://via.placeholder.com/40",
+            iconUrl: "https://th.bing.com/th/id/OIP.VjYP1UlejFM2cfE3_98E1AHaEK?rs=1&pid=ImgDetMain",
             category: "Developer",
             categoryClass: "developer"
           },
           {
             name: "Digital Marketing",
             members: 24,
-            iconUrl: "https://via.placeholder.com/40",
+            iconUrl: "https://logos-world.net/wp-content/uploads/2020/04/Twitter-Emblem.png",
             category: "Marketing",
             categoryClass: "marketing"
           }
@@ -88,6 +88,8 @@
           border-radius: 50%;
           width: 40px;
           height: 40px;
+          object-fit: cover;
+          object-position: center center;
         }
       }
   

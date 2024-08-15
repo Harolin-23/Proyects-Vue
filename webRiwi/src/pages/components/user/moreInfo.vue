@@ -4,15 +4,15 @@
         <h4>Overview</h4>
         <div class="info-item">
           <i class="icon-user"></i>
-          <span>Task compiled <strong>{{ user.Taskcompiled }}</strong></span>
+          <span><i class="fa-solid fa-code"></i> Task compiled <strong>{{ user.Taskcompiled }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-status"></i>
-          <span>conections <strong>{{ user.conections }}</strong></span>
+          <span><i class="fa-solid fa-users"></i> conections <strong>{{ user.conections }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-role"></i>
-          <span>Proyects compiled <strong>{{ user.Proyectscompiled }}</strong></span>
+          <span><i class="fa-solid fa-list"></i> Proyects compiled <strong>{{ user.Proyectscompiled }}</strong></span>
         </div>
       </div>
     </div>

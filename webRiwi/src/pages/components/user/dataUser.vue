@@ -4,23 +4,23 @@
         <h4>ABOUT</h4>
         <div class="info-item">
           <i class="icon-user"></i>
-          <span>Full Name: <strong>{{ user.fullName }}</strong></span>
+          <span><i class="fa-solid fa-user"></i> Full Name: <strong>{{ user.fullName }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-status"></i>
-          <span>Status: <strong>{{ user.status }}</strong></span>
+          <span><i class="fa-solid fa-check"></i>Status: <strong>{{ user.status }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-role"></i>
-          <span>Role: <strong>{{ user.role }}</strong></span>
+          <span><i class="fa-solid fa-crown"></i> Role: <strong>{{ user.role }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-country"></i>
-          <span>Country: <strong>{{ user.country }}</strong></span>
+          <span><i class="fa-solid fa-flag"></i> Country: <strong>{{ user.country }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-language"></i>
-          <span>Language: <strong>{{ user.language }}</strong></span>
+          <span><i class="fa-solid fa-language"></i>Language: <strong>{{ user.language }}</strong></span>
         </div>
       </div>
   
@@ -28,15 +28,15 @@
         <h4>CONTACTS</h4>
         <div class="info-item">
           <i class="icon-phone"></i>
-          <span>Contact: <strong>{{ user.contact.phone }}</strong></span>
+          <span><i class="fa-solid fa-phone"></i> Contact: <strong>{{ user.contact.phone }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-skype"></i>
-          <span>Skype: <strong>{{ user.contact.skype }}</strong></span>
+          <span><i class="fa-brands fa-skype"></i> Skype: <strong>{{ user.contact.skype }}</strong></span>
         </div>
         <div class="info-item">
           <i class="icon-email"></i>
-          <span>Email: <strong>{{ user.contact.email }}</strong></span>
+          <span><i class="fa-solid fa-envelope"></i> Email: <strong>{{ user.contact.email }}</strong></span>
         </div>
       </div>
   
