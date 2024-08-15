@@ -146,7 +146,7 @@ function toggleDarkMode() {
 .render-status{
     width: 100%;
     height: auto;
-    transition: 0.4s ease-in;
+   
     .status{
         animation-name: op-sect-a;
         animation-duration: 1.5s ;

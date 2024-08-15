@@ -47,6 +47,7 @@ export default {
    align-items: center;
    font-size: calc(0.4em + 0.3vw);
    flex-direction: column;
+   transition: 0.1s;
    gap: 12px;
    box-shadow:
     0.3em 0.3em 1em rgba(0, 0, 0, 0.11);
@@ -84,6 +85,7 @@ export default {
 
 }
     .logo{
+     
         width: 100%;
         height: 100px;
         object-fit: contain;

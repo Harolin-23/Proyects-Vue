@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -8,10 +9,10 @@
   .container-web {
     display: flex;
     flex-direction: row;
-    width: 99%;
+    width: 100%;
     height: auto;
     gap: 10%;
-    border-radius: 15px;
+
     padding: 10px;
     transition: 0.2s;
 }
@@ -34,6 +35,60 @@
 .dark {
     background-color: #3b3b3b;
     color: #fff;
+
+    .category{
+        
+        color: #00000088 !important;
+    }
+
+    tbody{
+       
+        tr{
+            transition: 0.4s !important;
+            &:hover{
+                background-color: #41414100 !important;
+            }
+        }
+        .progress {
+            background-color:  #ffffff !important;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 4px;
+      
+            .progress-bar {
+              background-color: #7367f0 !important;
+              height: 6px;
+              transition: width 0.3s;
+            }
+        }
+    }
+
+    
+   
+
+    thead{
+        background-color: #3b3b3b !important;
+        color: #fff !important;
+        th{
+            background-color: #3b3b3b !important;
+           
+        }
+
+    }
+
+    header{ 
+        background-color: #3b3b3b !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.274) !important;
+    }
+
+    .logo{
+        opacity: 0 !important;
+    }
+
+    i{
+        color: #fff;
+    }
+
     .button {
         color: white !important;
     }
