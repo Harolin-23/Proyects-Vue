@@ -48,10 +48,6 @@ export default defineComponent({
     background-color: rgba(240, 248, 255, 0);
     font-size: calc(0.1em + 1vw);
     color:rgba(0, 0, 0, 0.363);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
    cursor: pointer;
    &:active {
          transform: scale(0.95);

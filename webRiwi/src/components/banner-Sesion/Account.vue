@@ -90,11 +90,10 @@ export default defineComponent({
         display: flex;
         align-items: center;
         justify-content: space-around;
-        gap: 10px;
+        gap: 20px;
         p{
           display: flex;
           gap: 10px;
-          width: 168px;
           font-size: calc(0.1em + 1vw);
           color:rgba(0, 0, 0, 0.363);
           cursor: pointer;
