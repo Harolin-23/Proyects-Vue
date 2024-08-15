@@ -43,8 +43,7 @@
                 />
             </div>
             <div class="render-status" >
-                <div v-if="activeButton === 'profile'" class="status">
-                    
+                <div v-if="activeButton === 'profile'" class="status ">
                     <div class="sec-1">
                         <dataUser />
                         <MoredataUser />
@@ -56,15 +55,59 @@
                             <teamsComp />
                         </div>
                         <ListProyect />
-                       
                     </div>
-                    
-                
-                   
                 </div>
-                <div v-else-if="activeButton === 'team'"  class="status">
-                    <h1>Team</h1>
-                    <p>Team</p>
+                <div v-else-if="activeButton === 'team'"  class="status cards-contApp">
+                    <teamView 
+                     titulo="Desarrollo React" 
+                     descripcion="Se requiere equipo de mantenimiento" 
+                     tecnologia="React"
+                     foto="https://th.bing.com/th/id/OIP.trOsAeDjlsjc5ZpVh9PhKQHaHa?rs=1&pid=ImgDetMain"
+                     />
+                     <teamView 
+                        titulo="Desarrollo Vue" 
+                        descripcion="Se requiere equipo de desarrollo" 
+                        tecnologia="Vue"
+                        foto="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+                    />
+                    <teamView 
+                        titulo="Svelte" 
+                        descripcion="Se requiere equipo de desarrollo" 
+                        tecnologia="Svelte"
+                        foto="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
+                    />
+                    <teamView 
+                        titulo="Node.js" 
+                        descripcion="Se requiere equipo de backend" 
+                        tecnologia="Node.js"
+                        foto="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                    />
+                    <teamView 
+                        titulo=" Django" 
+                        descripcion="Se requiere equipo de backend" 
+                        tecnologia="Django"
+                        foto="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg"
+                    />
+                    <teamView 
+                        titulo=" Flask" 
+                        descripcion="Se requiere equipo de backend" 
+                        tecnologia="Flask"
+                        foto="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg"
+                    />
+                    <teamView 
+                        titulo=" Laravel" 
+                        descripcion="Se requiere equipo de backend" 
+                        tecnologia="Laravel"
+                        foto="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
+                    />
+                    <teamView 
+                        titulo=" Spring" 
+                        descripcion="Se requiere equipo de backend" 
+                        tecnologia="Spring"
+                        foto="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg"
+                    />
+                 
+
                 </div>
                 <div v-else-if="activeButton === 'projects'"  class="status">
                     <h1>Projects</h1>
@@ -96,6 +139,7 @@ import dataUser from './pages/components/user/dataUser.vue'
 import conection from './pages/components/user/conection.vue'
 import teamsComp from './pages/components/user/teams.vue'
 import MoredataUser from './pages/components/user/moreInfo.vue'
+import teamView from './pages/components/groups/teamView.vue'
 
 
 import { ref } from "vue";
@@ -141,6 +185,13 @@ function toggleDarkMode() {
         display: flex;
         gap: 2%;
         width: 100%;
+    }
+    .cards-contApp{
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
 
 .render-status{
