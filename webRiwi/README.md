@@ -32,7 +32,7 @@ Estas interfaces deben ser implementadas con precisión, siguiendo los layouts p
 A continuación se mostrarán capturas de pantalla de las interfaces desarrolladas para una mejor visualización del proyecto:
 
 1. **Perfil General**  
-   ![Perfil General](ruta/a/la/imagen-perfil-general.png)
+   ![Perfil General](../View/proyectRiwi1/principalVIew.png)
 
 2. **Conexiones**  
    ![Conexiones](ruta/a/la/imagen-conexiones.png)
