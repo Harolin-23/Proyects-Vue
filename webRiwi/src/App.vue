@@ -108,7 +108,7 @@
                     />
                 </div>
                 <div v-else-if="activeButton === 'projects'" class="status">
-                        <h1>Proyects</h1>
+                      <ListProyectCards :projects="moreData" />
                 </div>
                 <div v-else-if="activeButton === 'connections'" class="status cards-contApp">
                     <conectCards :people="peopleData" />
@@ -136,6 +136,7 @@ import teamsComp from './pages/components/user/teams.vue';
 import MoredataUser from './pages/components/user/moreInfo.vue';
 import teamView from './pages/components/groups/teamView.vue';
 import conectCards from './pages/components/conections/conectCards.vue';
+import ListProyectCards from './pages/components/proyects/proyectsView.vue'
 
 import { ref } from "vue";
 
@@ -194,6 +195,126 @@ const peopleData = ref([
         imagen: 'https://randomuser.me/api/portraits/men/5.jpg'
     }
 ]);
+
+
+    const moreData = ref([
+    {
+        title: 'Social Banners',
+        client: 'Christian Jimenez',
+        currentBudget: '$24.8k',
+        totalBudget: '$18.2k',
+        startDate: '14/2/21',
+        deadline: '28/2/22',
+        description: 'We are Consulting, Software Development and Web Development Services.',
+        allHoursCompleted: 380,
+        allHoursTotal: 244,
+        taskCompleted: 290,
+        taskTotal: 344,
+        progress: 95,
+        daysLeft: 28,
+        members: [
+            { name: 'John Doe', avatar: 'https://randomuser.me/api/portraits/men/1.jpg' },
+            { name: 'Jane Smith', avatar: 'https://randomuser.me/api/portraits/women/2.jpg' },
+            { name: 'Alice Johnson', avatar: 'https://randomuser.me/api/portraits/women/3.jpg' },
+        ],
+        memberCount: 280,
+        commentsCount: 15,
+        icon: 'fas fa-globe',
+    },
+    {
+        title: 'Marketing Campaign',
+        client: 'Laura Martinez',
+        currentBudget: '$30.5k',
+        totalBudget: '$50k',
+        startDate: '1/3/21',
+        deadline: '1/6/22',
+        description: 'Marketing campaign for new product launch.',
+        allHoursCompleted: 500,
+        allHoursTotal: 600,
+        taskCompleted: 400,
+        taskTotal: 450,
+        progress: 88,
+        daysLeft: 60,
+        members: [
+            { name: 'Michael Brown', avatar: 'https://randomuser.me/api/portraits/men/4.jpg' },
+            { name: 'Emily Davis', avatar: 'https://randomuser.me/api/portraits/women/5.jpg' },
+            { name: 'David Wilson', avatar: 'https://randomuser.me/api/portraits/men/6.jpg' },
+        ],
+        memberCount: 150,
+        commentsCount: 20,
+        icon: 'fas fa-bullhorn',
+    },
+    {
+        title: 'Website Redesign',
+        client: 'Carlos Lopez',
+        currentBudget: '$15k',
+        totalBudget: '$25k',
+        startDate: '10/1/21',
+        deadline: '10/5/22',
+        description: 'Complete redesign of the company website.',
+        allHoursCompleted: 200,
+        allHoursTotal: 300,
+        taskCompleted: 150,
+        taskTotal: 200,
+        progress: 75,
+        daysLeft: 90,
+        members: [
+            { name: 'Sarah Miller', avatar: 'https://randomuser.me/api/portraits/women/7.jpg' },
+            { name: 'James Anderson', avatar: 'https://randomuser.me/api/portraits/men/8.jpg' },
+            { name: 'Patricia Thomas', avatar: 'https://randomuser.me/api/portraits/women/9.jpg' },
+        ],
+        memberCount: 100,
+        commentsCount: 10,
+        icon: 'fas fa-laptop',
+    },
+    {
+        title: 'Mobile App Development',
+        client: 'Ana Gonzalez',
+        currentBudget: '$40k',
+        totalBudget: '$60k',
+        startDate: '5/2/21',
+        deadline: '5/8/22',
+        description: 'Development of a new mobile application.',
+        allHoursCompleted: 600,
+        allHoursTotal: 800,
+        taskCompleted: 500,
+        taskTotal: 600,
+        progress: 83,
+        daysLeft: 120,
+        members: [
+            { name: 'Robert Martinez', avatar: 'https://randomuser.me/api/portraits/men/10.jpg' },
+            { name: 'Linda Rodriguez', avatar: 'https://randomuser.me/api/portraits/women/11.jpg' },
+            { name: 'William Hernandez', avatar: 'https://randomuser.me/api/portraits/men/12.jpg' },
+        ],
+        memberCount: 200,
+        commentsCount: 25,
+        icon: 'fas fa-mobile-alt',
+    },
+    {
+        title: 'SEO Optimization',
+        client: 'Miguel Ramirez',
+        currentBudget: '$10k',
+        totalBudget: '$15k',
+        startDate: '20/3/21',
+        deadline: '20/9/22',
+        description: 'SEO optimization for better search engine ranking.',
+        allHoursCompleted: 150,
+        allHoursTotal: 200,
+        taskCompleted: 120,
+        taskTotal: 150,
+        progress: 80,
+        daysLeft: 180,
+        members: [
+            { name: 'Barbara Clark', avatar: 'https://randomuser.me/api/portraits/women/13.jpg' },
+            { name: 'Paul Lewis', avatar: 'https://randomuser.me/api/portraits/men/14.jpg' },
+            { name: 'Jessica Walker', avatar: 'https://randomuser.me/api/portraits/women/15.jpg' },
+        ],
+        memberCount: 50,
+        commentsCount: 5,
+        icon: 'fas fa-search',
+    }
+    ])
+
 
 function setActiveButton(button: string) {
     activeButton.value = button;
