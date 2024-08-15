@@ -42,9 +42,14 @@ export default defineComponent({
 
 <style scoped>
 .button {
-    width: 150px;
+    width: 155px;
     height: 45px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
     background-color: rgba(240, 248, 255, 0);
     font-size: calc(0.1em + 1vw);
     color:rgba(0, 0, 0, 0.363);

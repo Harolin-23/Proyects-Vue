@@ -65,7 +65,7 @@
   
   <style lang="scss">
   .connection-list {
-    width: 60%;
+    width: 50%;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;

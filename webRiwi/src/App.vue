@@ -45,10 +45,21 @@
             <div class="render-status" >
                 <div v-if="activeButton === 'profile'" class="status">
                     
-                    <dataUser />
-                    <Timeline />
-                    <ListProyect />
-                    <conection />
+                    <div class="sec-1">
+                        <dataUser />
+                        <MoredataUser />
+                    </div>
+                    <div class="sec-2">
+                        <Timeline />
+                        <div class="sec-3">
+                            <conection />
+                            <teamsComp />
+                        </div>
+                        <ListProyect />
+                       
+                    </div>
+                    
+                
                    
                 </div>
                 <div v-else-if="activeButton === 'team'"  class="status">
@@ -83,8 +94,8 @@ import Timeline from './pages/components/user/Timeline.vue';
 import ListProyect from './pages/components/user/proyectList.vue'
 import dataUser from './pages/components/user/dataUser.vue'
 import conection from './pages/components/user/conection.vue'
-
-
+import teamsComp from './pages/components/user/teams.vue'
+import MoredataUser from './pages/components/user/moreInfo.vue'
 
 
 import { ref } from "vue";
@@ -107,6 +118,24 @@ function setActiveButton(button: string) {
     align-items: center;
     padding-left: 12px;
 }
+    .sec-1{
+       display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sec-2{
+        width: 72%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sec-3{
+        display: flex;
+        gap: 2%;
+        width: 100%;
+    }
 
 .render-status{
     width: 100%;

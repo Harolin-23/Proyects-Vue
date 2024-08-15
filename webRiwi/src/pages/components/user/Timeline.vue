@@ -54,7 +54,7 @@
 .activity-timeline {
   background-color: #f9f9f9;
   padding: 16px;
-  width: 70%;
+  width: 90%;
  
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
