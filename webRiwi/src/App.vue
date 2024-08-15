@@ -1,7 +1,7 @@
 
 ```vue
 <template>
-     <div :class="{'dark': isDarkMode}" class="container-web">
+    <div :class="{'dark': isDarkMode}" class="container-web">
         <div class="lef-sect">
             <Menu />
         </div>
@@ -42,8 +42,8 @@
                     @click="setActiveButton('connections')"
                 />
             </div>
-            <div class="render-status" >
-                <div v-if="activeButton === 'profile'" class="status ">
+            <div class="render-status">
+                <div v-if="activeButton === 'profile'" class="status">
                     <div class="sec-1">
                         <dataUser />
                         <MoredataUser />
@@ -57,14 +57,14 @@
                         <ListProyect />
                     </div>
                 </div>
-                <div v-else-if="activeButton === 'team'"  class="status cards-contApp">
+                <div v-else-if="activeButton === 'team'" class="status cards-contApp">
                     <teamView 
-                     titulo="Desarrollo React" 
-                     descripcion="Se requiere equipo de mantenimiento" 
-                     tecnologia="React"
-                     foto="https://th.bing.com/th/id/OIP.trOsAeDjlsjc5ZpVh9PhKQHaHa?rs=1&pid=ImgDetMain"
-                     />
-                     <teamView 
+                        titulo="Desarrollo React" 
+                        descripcion="Se requiere equipo de mantenimiento" 
+                        tecnologia="React"
+                        foto="https://th.bing.com/th/id/OIP.trOsAeDjlsjc5ZpVh9PhKQHaHa?rs=1&pid=ImgDetMain"
+                    />
+                    <teamView 
                         titulo="Desarrollo Vue" 
                         descripcion="Se requiere equipo de desarrollo" 
                         tecnologia="Vue"
@@ -83,46 +83,41 @@
                         foto="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
                     />
                     <teamView 
-                        titulo=" Django" 
+                        titulo="Django" 
                         descripcion="Se requiere equipo de backend" 
                         tecnologia="Django"
                         foto="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg"
                     />
                     <teamView 
-                        titulo=" Flask" 
+                        titulo="Flask" 
                         descripcion="Se requiere equipo de backend" 
                         tecnologia="Flask"
                         foto="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg"
                     />
                     <teamView 
-                        titulo=" Laravel" 
+                        titulo="Laravel" 
                         descripcion="Se requiere equipo de backend" 
                         tecnologia="Laravel"
                         foto="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
                     />
                     <teamView 
-                        titulo=" Spring" 
+                        titulo="Spring" 
                         descripcion="Se requiere equipo de backend" 
                         tecnologia="Spring"
                         foto="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg"
                     />
-                 
-
                 </div>
-                <div v-else-if="activeButton === 'projects'"  class="status">
-                    <h1>Projects</h1>
-                    <p>Projects</p>
+                <div v-else-if="activeButton === 'projects'" class="status">
+                        <h1>Proyects</h1>
                 </div>
-                <div v-else-if="activeButton === 'connections'"  class="status">
-                    <h1>Connections</h1>
-                    <p>Connections</p>
+                <div v-else-if="activeButton === 'connections'" class="status cards-contApp">
+                    <conectCards :people="peopleData" />
                 </div>
                 <div v-else>
                     <h1>Profile</h1>
                     <p>Profile</p>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -134,29 +129,79 @@ import Header from './components/header/Header.vue';
 import ProfileCard from './components/banner-Sesion/Account.vue';
 import Buttoms from './components/buttons/Buttoms.vue';
 import Timeline from './pages/components/user/Timeline.vue';
-import ListProyect from './pages/components/user/proyectList.vue'
-import dataUser from './pages/components/user/dataUser.vue'
-import conection from './pages/components/user/conection.vue'
-import teamsComp from './pages/components/user/teams.vue'
-import MoredataUser from './pages/components/user/moreInfo.vue'
-import teamView from './pages/components/groups/teamView.vue'
-
+import ListProyect from './pages/components/user/proyectList.vue';
+import dataUser from './pages/components/user/dataUser.vue';
+import conection from './pages/components/user/conection.vue';
+import teamsComp from './pages/components/user/teams.vue';
+import MoredataUser from './pages/components/user/moreInfo.vue';
+import teamView from './pages/components/groups/teamView.vue';
+import conectCards from './pages/components/conections/conectCards.vue';
 
 import { ref } from "vue";
 
 const activeButton = ref<string | null>('profile');
-    const isDarkMode = ref<boolean>(false);
+const isDarkMode = ref<boolean>(false);
+
+const peopleData = ref([
+    {
+        id: 1,
+        name: 'John Doe',
+        position: 'Frontend Developer',
+        skill: 'React',
+        numProjects: 5,
+        numTasks: 20,
+        numConnections: 15,
+        imagen: 'https://randomuser.me/api/portraits/men/1.jpg'
+    },
+    {
+        id: 2,
+        name: 'Jane Smith',
+        position: 'Backend Developer',
+        skill: 'Node.js',
+        numProjects: 3,
+        numTasks: 15,
+        numConnections: 10,
+        imagen: 'https://randomuser.me/api/portraits/women/2.jpg'
+    },
+    {
+        id: 3,
+        name: 'Alice Johnson',
+        position: 'Full Stack Developer',
+        skill: 'Vue.js',
+        numProjects: 7,
+        numTasks: 25,
+        numConnections: 20,
+        imagen: 'https://randomuser.me/api/portraits/women/3.jpg'
+    },
+    {
+        id: 4,
+        name: 'Bob Brown',
+        position: 'DevOps Engineer',
+        skill: 'AWS',
+        numProjects: 4,
+        numTasks: 18,
+        numConnections: 12,
+        imagen: 'https://randomuser.me/api/portraits/men/4.jpg'
+    },
+    {
+        id: 5,
+        name: 'Charlie Davis',
+        position: 'Data Scientist',
+        skill: 'Python',
+        numProjects: 6,
+        numTasks: 22,
+        numConnections: 17,
+        imagen: 'https://randomuser.me/api/portraits/men/5.jpg'
+    }
+]);
 
 function setActiveButton(button: string) {
     activeButton.value = button;
 }
 
-
 function toggleDarkMode() {
     isDarkMode.value = !isDarkMode.value;
 }
-
-
 </script>
 
 <style scoped>
@@ -168,54 +213,49 @@ function toggleDarkMode() {
     align-items: center;
     padding-left: 12px;
 }
-    .sec-1{
-       display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .sec-2{
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .sec-3{
-        display: flex;
-        gap: 2%;
-        width: 100%;
-    }
-    .cards-contApp{
-        width: 100%;
-        flex-wrap: wrap;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-.render-status{
+.sec-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sec-2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sec-3 {
+    display: flex;
+    gap: 2%;
+    width: 100%;
+}
+.cards-contApp {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.render-status {
     width: 100%;
     height: auto;
-   
-    .status{
-        animation-name: op-sect-a;
-        animation-duration: 1.5s ;
-        animation-fill-mode: forwards;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 12px;
-        gap: 20px;
-    }
-}   
-@keyframes op-sect-a{
-    0%{
+}
+.status {
+    animation-name: op-sect-a;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 20px;
+}
+@keyframes op-sect-a {
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
-
 </style>
