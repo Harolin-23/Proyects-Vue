@@ -18,16 +18,16 @@ Riwi necesita una plataforma de conectividad profesional diseñada específicame
 
 ## Capturas de Pantalla
 1. **Perfil General**  
-   ![Perfil General](../View/proyectRiwi1/principalVIew.png)
+![Perfil General](../View/proyectRiwi1/principalVIew.png)
 
 2.**Equipos**  
-   ![Equipos](../View/proyectRiwi1/teamView.png)
+![Equipos](../View/proyectRiwi1/teamView.png)
 
 3. **Proyectos**  
-   ![Proyectos](ruta/a/la/imagen-proyectos.png)
+![Proyectos](ruta/a/la/imagen-proyectos.png)
 
 4. **Conexiones**  
-   ![Conexiones](../View/proyectRiwi1/connectView.png)
+![Conexiones](../View/proyectRiwi1/connectView.png)
 
 ## Instalación y Configuración
 
