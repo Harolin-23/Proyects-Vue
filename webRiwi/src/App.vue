@@ -1,12 +1,12 @@
 
 ```vue
 <template>
-    <div class="container-web">
+     <div :class="{'dark': isDarkMode}" class="container-web">
         <div class="lef-sect">
             <Menu />
         </div>
         <div class="rigth-sect">
-            <Header />
+            <Header @toggleDarkMode="toggleDarkMode"/>
             <ProfileCard 
                 nombre="Harol Chaverra"
                 imagen="../src/assets/me.jpg"
@@ -101,9 +101,15 @@ import MoredataUser from './pages/components/user/moreInfo.vue'
 import { ref } from "vue";
 
 const activeButton = ref<string | null>('profile');
+    const isDarkMode = ref<boolean>(false);
 
 function setActiveButton(button: string) {
     activeButton.value = button;
+}
+
+
+function toggleDarkMode() {
+    isDarkMode.value = !isDarkMode.value;
 }
 
 
@@ -125,7 +131,7 @@ function setActiveButton(button: string) {
     }
 
     .sec-2{
-        width: 72%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         gap: 20px;

@@ -7,7 +7,9 @@
             <input type="text" placeholder="Search">
             <div class="more-account">
                 <i class="fa-solid fa-language"></i>
-                <i class="fa-solid fa-sun"></i>
+
+                <i :class="isDarkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" @click="toggleDarkMode"></i>
+
                 <i class="fa-solid fa-list"></i>
                 <i class="fa-regular fa-bell"></i>
                 <div class="account">
@@ -19,11 +21,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
     name: 'Header',
+    emits: ['toggleDarkMode'],
+    setup(props, { emit }) {
+        const isDarkMode = ref(false);
 
+        function toggleDarkMode() {
+            isDarkMode.value = !isDarkMode.value;
+            emit('toggleDarkMode');
+        }
+        return {
+            isDarkMode,
+            toggleDarkMode
+        };
+    }
 });
 </script>
 

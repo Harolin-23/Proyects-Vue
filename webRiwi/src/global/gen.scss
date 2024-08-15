@@ -9,10 +9,11 @@
     display: flex;
     flex-direction: row;
     width: 99%;
-    height: 80%;
+    height: auto;
     gap: 10%;
     border-radius: 15px;
     padding: 10px;
+    transition: 0.2s;
 }
 .lef-sect {
     width: 3%;
@@ -30,3 +31,43 @@
     gap: 40px;
 }
 
+.dark {
+    background-color: #3b3b3b;
+    color: #fff;
+    .button {
+        color: white !important;
+    }
+
+    h3{
+        color: #7367f0 !important;
+    }
+
+    p{
+    
+        color: rgba(255, 255, 255, 0.418) !important;
+        &:hover{
+            color:#8f83ff !important;
+        }
+    }
+    div{
+        background-color: #3b3b3b !important;
+        padding: 0 black;
+        box-shadow: none;   
+        strong{
+          color:  #ffffff73 !important;
+        } 
+        span{
+            color:  #fff !important;
+        }
+        .purple {
+            background-color: #7367f0 !important;
+          }
+        .green {
+            background-color: #28c76f !important;
+          }
+        .blue {
+            background-color: #00cfe8 !important;
+          }
+       
+    }
+}
