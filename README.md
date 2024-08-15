@@ -4,6 +4,8 @@
 
 Este repositorio está dedicado a mi viaje de aprendizaje de Vue.js, comenzando desde los conceptos básicos hasta llegar a un nivel avanzado. A lo largo de este proceso, iré documentando mi progreso y recopilando diversos recursos que me ayuden a entender mejor las distintas facetas de Vue.js.
 
+![MapaMenta](View/avance/mapaMental1.png)
+
 ## Contenidos
 
 - **Proyectos:** Ejemplos y proyectos pequeños que voy desarrollando para practicar y aplicar lo aprendido.
