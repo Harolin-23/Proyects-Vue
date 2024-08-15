@@ -25,7 +25,7 @@ Riwi necesita una plataforma de conectividad profesional diseñada específicame
 ![Equipos](../View/proyectRiwi1/teamView.png)
 
 - **Proyectos**  
-![Proyectos](ruta/a/la/imagen-proyectos.png)
+![Proyectos](../View/proyectRiwi1/proyectView.png)
 
 - **Conexiones**  
 ![Conexiones](../View/proyectRiwi1/connectView.png)
