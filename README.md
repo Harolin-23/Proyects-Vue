@@ -1,8 +1,11 @@
-# Vue Learning Journey 🚀
+# Vue Proyects 🚀
 
 ## Descripción
 
-Este repositorio está dedicado a mi viaje de aprendizaje de Vue.js, comenzando desde los conceptos básicos hasta llegar a un nivel avanzado. A lo largo de este proceso, iré documentando mi progreso y recopilando diversos recursos que me ayuden a entender mejor las distintas facetas de Vue.js.
+Este repositorio Subire proyectos para probar mis habilidades y conocmiento sobre Vue, comenzando desde los conceptos básicos hasta llegar a un nivel avanzado. A lo largo de este proceso, iré documentando mi progreso y recopilando diversos recursos 
+para y mostrar mi exelente trabajo.
+
+![MapaMenta](View/avance/mapaMental1.png)
 
 ## Contenidos
 
