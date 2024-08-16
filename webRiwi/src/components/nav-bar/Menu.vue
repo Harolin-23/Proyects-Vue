@@ -40,14 +40,15 @@ export default {
 
 <style lang="scss" scoped>
 .menu {
-    position: static;
-    width: 100%;
+
+    width: 50px;
     height: 100%;
    display: flex;
    align-items: center;
    font-size: calc(0.4em + 0.3vw);
    flex-direction: column;
    transition: 0.1s;
+   position: fixed;
    gap: 12px;
    box-shadow:
     0.3em 0.3em 1em rgba(0, 0, 0, 0.11);
@@ -120,7 +121,49 @@ export default {
             color: rgb(30, 26, 75);
         }
     }
+
+    
 }
+
+@media screen and (max-width: 1360px) {
+
+    .menu{
+        background-color: rgba(255, 255, 255, 0.74);
+        z-index: 20;
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        backdrop-filter: blur(10px);
+        bottom: 0;
+        font-size: calc(2em + 1vw);
+        justify-content: space-around;
+        .logo{
+            display: none;
+        }
+    }
+    .sup-case{
+        display: none !important;
+          height: 100%;
+        }
+
+        .sep-hr{
+            display: none;
+        }
+        .oth-case{
+            flex-direction: row !important;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1px;
+            height: 100%;
+            overflow-x: auto;
+            padding-right: 30px;
+        }
+
+
+}
+
+
+
 
 
 

@@ -41,6 +41,14 @@ export default defineComponent({
 </script>
 
 <style scoped>
+    @media screen and (max-width: 1360px) {
+        .button {
+            font-size: calc(1em + 1vw) !important;
+        }
+    }
+
+
+
 .button {
     width: 155px;
     height: 45px;
@@ -78,7 +86,7 @@ export default defineComponent({
 .active {
     background-color:  rgb(104,93,215); /* Cambia este color según tus necesidades */
     color: white;
-    width: 150px;
+    width: 160px;
     height: 45px;
    border: none;
    transition: 0.3s ease-in;

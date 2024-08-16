@@ -381,6 +381,8 @@ function toggleDarkMode() {
 }
 
 @media screen and (max-width: 1360px) {
+
+
     .sec-1{
         width: 100%;
         justify-content: center;

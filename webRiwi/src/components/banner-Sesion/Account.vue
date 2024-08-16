@@ -125,4 +125,18 @@ h2 {
   font-size: 1.2em;
   margin: 0;
 }
+
+@media screen and (max-width: 1360px) {
+  .name-links{
+    font-size: calc(1em + 1vw) !important;
+  }
+
+  p{
+    font-size: calc(0.5em + 1vw) !important;
+  }
+
+
+}
+
+
 </style>
