@@ -43,14 +43,18 @@ export default defineComponent({
 
 <style scoped>
 header {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 90%;
+    backdrop-filter: blur(10px);
     display: flex;
-    background-color: #f2f2f2;
+    background-color: #f2f2f2a6;
     padding: 5px;
     border-radius: 5px;
     box-shadow:
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.096);
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.171);
+    position: fixed;
+
+    z-index: 20;
+
 }
 
 .container-hed {

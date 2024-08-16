@@ -77,8 +77,22 @@
     }
 
     header{ 
-        background-color: #3b3b3b !important;
+        background-color: #3b3b3b3a !important;
+        backdrop-filter: blur(10px) !important;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.274) !important;
+        .container-hed{
+            background-color: #3b3b3b3a !important;
+            .icon-searc{
+                background-color: #3b3b3b3a !important;
+            }
+            
+        }
+        .more-account{
+            background-color: #3b3b3b3a !important;
+            .account{
+                background-color: #3b3b3b3a !important;
+            }
+        }
     }
 
     .logo{

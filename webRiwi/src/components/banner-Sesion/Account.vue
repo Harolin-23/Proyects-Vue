@@ -50,6 +50,7 @@ export default defineComponent({
   height: 30vh;
   flex-direction: column;
   background-color: #e6e6e6;
+  margin-top: 8%;
   .banner-fot{
     height: 60%;
     width: 100%;
