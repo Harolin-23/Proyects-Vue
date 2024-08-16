@@ -12,7 +12,7 @@
     width: 100%;
     height: auto;
     gap: 10%;
-
+    margin-bottom: 10px;
     padding: 10px;
     transition: 0.2s;
 }
@@ -31,6 +31,28 @@
     align-items: center;
     gap: 40px;
 }
+
+
+@media screen and (max-width: 1360px) {
+    .rigth-sect {
+        width: 100% !important;
+    }
+    .lef-sect{
+        width: 0%;
+    }
+
+    .container-web {
+        padding: 0px !important;
+        gap: 0px
+        ;
+    }
+
+}
+
+
+
+
+
 
 .dark {
     background-color: #3b3b3b;

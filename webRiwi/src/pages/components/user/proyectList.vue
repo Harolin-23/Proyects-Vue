@@ -129,9 +129,13 @@
     table {
       width: 100%;
       border-collapse: collapse;
-  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       th,
       td {
+        font-size: calc(0.1em + 1vw);
+        width: 10%;
         padding: 12px;
         text-align: left;
       }

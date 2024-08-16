@@ -381,10 +381,9 @@ function toggleDarkMode() {
 }
 
 @media screen and (max-width: 1360px) {
-
-
+ 
     .sec-1{
-        width: 100%;
+        width: 100% !important;
         justify-content: center;
   
    
@@ -392,6 +391,12 @@ function toggleDarkMode() {
             width: 100%;
             font-size: calc(1em + 1vw) !important;
         }
+    }
+    .actions-status{
+        width: 100% !important; 
+        flex-wrap: wrap;
+        margin: 20px;
+        justify-content: space-around;
     }
 
     .sec-2{
