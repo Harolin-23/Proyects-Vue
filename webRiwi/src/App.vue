@@ -379,4 +379,43 @@ function toggleDarkMode() {
         opacity: 1;
     }
 }
+
+
+
+
+@media screen and (max-width: 1360px) {
+    .sec-1{
+        width: 100%;
+        justify-content: center;
+  
+   
+        .user-profile{
+            width: 100%;
+            font-size: calc(1em + 1vw) !important;
+        }
+    }
+
+    .sec-2{
+        width: 100%;
+        .sec-3{
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          
+            .team-list{
+                width: 100% !important;
+            }
+            .connection-list{
+                width: 100% !important;
+            }
+        }
+
+    }
+
+    .status{
+        display: flex;
+        transition: 0.3s;
+    }
+}
 </style>

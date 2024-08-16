@@ -70,7 +70,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.274) !important;
-    max-width: 400px;
+
  
   
     h3 {
@@ -83,7 +83,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       width: 100%;
   
       .avatar {
@@ -138,25 +137,7 @@
     }
   }
   
-  @media only screen and (max-width: 600px) {
-    .connection-list {
-      max-width: 100%;
-      padding: 15px;
-    }
+
   
-    .connection-item .info {
-      h4 {
-        font-size: 14px;
-      }
-  
-      p {
-        font-size: 12px;
-      }
-    }
-  
-    .action-button {
-      font-size: 18px;
-    }
-  }
   </style>
   
