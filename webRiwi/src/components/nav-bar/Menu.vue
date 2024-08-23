@@ -157,6 +157,7 @@ export default {
             height: 100%;
             overflow-x: auto;
             padding-right: 30px;
+            padding-left: 30px
         }
 
 
