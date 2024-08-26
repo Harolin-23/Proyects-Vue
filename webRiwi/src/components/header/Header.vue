@@ -26,7 +26,7 @@ import { defineComponent, ref } from 'vue';
 export default defineComponent({
     name: 'Header',
     emits: ['toggleDarkMode'],
-    setup(props, { emit }) {
+    setup(_, { emit }) {
         const isDarkMode = ref(false);
 
         function toggleDarkMode() {
