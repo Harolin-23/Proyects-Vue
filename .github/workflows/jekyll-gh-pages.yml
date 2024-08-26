@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to Pages
-name: Deploy static content to Pages
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy WebRiwi content to Pages
 
 on:
   push:
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Proyects-Vue/WebRiwi/dist'  # Ruta donde se encuentra el build
+          path: './Proyects-Vue/WebRiwi/dist'  # Asegúrate de que este es el path correcto al build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
