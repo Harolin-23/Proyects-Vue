@@ -193,6 +193,7 @@ h2 {
     padding: px 0px 0px 0px!important;
     text-align: center !important;
     .name{
+      margin-top: 20%;
       width: 100%;
       text-align: center;
       font-size: calc(1.5em + 1vw) !important;
