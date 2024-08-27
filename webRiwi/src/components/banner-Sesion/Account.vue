@@ -84,7 +84,7 @@ export default defineComponent({
     flex-direction: column;
     align-items: start;
     padding-left: 12px;
-    width: 400px;
+    width: 500px;
     height: 100%;
     font-size: calc(0.3em + 1vw);
       .container-links{
@@ -135,7 +135,30 @@ h2 {
     font-size: calc(0.5em + 1vw) !important;
   }
 
+  .container-links{
+    margin-top: 12px;
+  }
 
+
+}
+
+@media screen and (max-width: 830px) {
+  .container-links{
+    font-size: calc(1.2em + 1vw) !important;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .profile-card{
+    width: 100%;
+    padding: 0px !important;
+  }
+  .name-links{
+    padding-top: 12px;
+    width: 800px !important;
+    padding: px 0px 0px 0px!important;
+  }
 }
 
 
