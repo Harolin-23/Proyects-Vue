@@ -8,12 +8,16 @@
           <img :src="imagen" alt="Profile Image" class="profile-image" />
       </div>
      <div class="name-links">
+      <div class="name">
         <h2>{{ nombre }}</h2>
+      </div>
         <div class="container-links">
             <p><i class="fa-solid fa-palette"></i>Coder</p>
             <p><i class="fa-solid fa-location-dot"></i>Medellin</p>
-
-            <p><i class="fa-regular fa-calendar"></i>Joinded Ayer</p>
+            <div class="more-v">
+              <p><i class="fa-regular fa-calendar"></i>Joinded Ayer</p>
+            </div>
+           
         </div>
      </div>
       
@@ -142,22 +146,58 @@ h2 {
 
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 630px) {
   .container-links{
-    font-size: calc(1.2em + 1vw) !important;
+    font-size: calc(1em + 1vw) !important;
     width: 100%;
-    height: 100%;
+    height: auto;
+    gap: 2px !important;
   }
-
+ 
+  .profile-image{
+    border: none;
+    width: 200px !important;
+    height: 200px !important;
+    position: relative;
+    top: -120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+    }
+    
+  }
+  .banner{
+    height: auto !important;
+  }
+  .profile-card {
+    padding: 0px;
+  }
 
   .profile-card{
     width: 100%;
     padding: 0px !important;
+    display: flex;
+    flex-direction: column;
   }
   .name-links{
-    padding-top: 12px;
-    width: 800px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    width: 100% !important;
     padding: px 0px 0px 0px!important;
+    text-align: center !important;
+    .name{
+      width: 100%;
+      text-align: center;
+      font-size: calc(1.5em + 1vw) !important;
+    }
+    
   }
 }
 
