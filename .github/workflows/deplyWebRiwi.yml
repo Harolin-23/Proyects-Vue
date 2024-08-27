@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy WebRiwi content to Pages
+# Deploy webRiwi to GitHub Pages
+name: Deploy webRiwi content to Pages
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: 'pages-webriwi'
   cancel-in-progress: true
 
 jobs:
@@ -47,9 +47,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './webRiwi/dist'  # La ruta del build
+          path: './webRiwi/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
