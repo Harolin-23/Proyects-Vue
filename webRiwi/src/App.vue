@@ -9,7 +9,7 @@
             <Header @toggleDarkMode="toggleDarkMode"/>
             <ProfileCard 
                 nombre="Harol Chaverra"
-                imagen= "../src/assets/me.jpg"
+                imagen= "https://Harolin-23.github.io/Proyects-Vue/assets/me-Bp8apug6.jpg"
             />
         
             <div class="actions-status">
