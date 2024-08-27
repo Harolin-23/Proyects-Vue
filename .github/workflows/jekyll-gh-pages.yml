@@ -1,4 +1,4 @@
-name: Deploy Multiple Projects
+name: Deploy WebRiwi
 
 on:
   push:
@@ -11,8 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  deploy-webriwi:
-    name: Deploy webRiwi
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,7 +20,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
       - name: Install dependencies
         run: |
           cd webRiwi
@@ -30,41 +28,8 @@ jobs:
         run: |
           cd webRiwi
           npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'webRiwi/dist'
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  deploy-pelisvue:
-    name: Deploy PelisVue
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          node-version: 20
-          cache: 'npm'
-      - name: Install dependencies
-        run: |
-          cd PelisVue
-          npm ci
-      - name: Build
-        run: |
-          cd PelisVue
-          npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'PelisVue/dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: webRiwi/dist
