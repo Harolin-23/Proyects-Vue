@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Proyects-Vue/WebRiwi/dist'  # Ruta donde se encuentra el build
+          path: './/WebRiwi/dist'  # Ruta donde se encuentra el build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
