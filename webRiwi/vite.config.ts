@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: 'https://Harolin-23.github.io/Proyects-Vue/',
+  base: '/Proyects-Vue/PelisVue/', 
   build: {
     outDir: 'dist',
   }
