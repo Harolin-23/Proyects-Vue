@@ -1,4 +1,4 @@
-
+# Deploy PelisVue to GitHub Pages
 name: Deploy PelisVue content to Pages
 
 on:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: 'pages-pelisvue'
   cancel-in-progress: true
 
 jobs:
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './PelisVue/dist' 
+          path: './PelisVue/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
