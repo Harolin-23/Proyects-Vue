@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy WebRiwi content to Pages
+name: Deploy PelisVue content to Pages
 
 on:
   push:
@@ -33,12 +32,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd webRiwi
+          cd PelisVue
           npm ci
 
       - name: Build
         run: |
-          cd webRiwi
+          cd PelisVue
           npm run build
 
       - name: Setup Pages
@@ -47,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './webRiwi/dist'  # La ruta del build
+          path: './PelisVue/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
