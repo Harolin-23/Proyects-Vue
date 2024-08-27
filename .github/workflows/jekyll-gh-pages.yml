@@ -1,4 +1,5 @@
-name: Deploy webRiwi
+# Simple workflow for deploying static content to Pages
+name: Deploy static content to Pages
 
 on:
   push:
@@ -10,8 +11,15 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,16 +28,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
       - name: Install dependencies
         run: |
-          cd webRiwi
+          cd Proyects-Vue/WebRiwi
           npm ci
       - name: Build
         run: |
-          cd webRiwi
+          cd Proyects-Vue/WebRiwi
           npm run build
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: webRiwi/dist
+          path: './Proyects-Vue/WebRiwi/dist'  # Ruta donde se encuentra el build
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
