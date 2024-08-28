@@ -55,6 +55,7 @@ export default {
     display: flex;
     align-items: center;
     gap: 1px;
+    z-index: 1000;
   }
   .logo {
     width: 250px;

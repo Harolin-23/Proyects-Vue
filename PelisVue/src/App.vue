@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './components/header/header.vue';
 import { ref, onMounted } from 'vue';
+import CardMovie from './components/cardMovie/CardMovie.vue'
 import { Carousel, Pagination, Slide } from 'vue3-carousel';
 
 import 'vue3-carousel/dist/carousel.css';
@@ -14,6 +15,17 @@ const slides = ref([
   { id: 6, image: 'https://wallpaperaccess.com/full/1534439.jpg', text: 'Texto 6' },
   { id: 7, image: 'https://wallpaperaccess.com/full/1453793.jpg', text: 'Texto 7' },
 ]);
+
+
+const movie = 
+        {
+            "Title": "Hola, ¿estás sola?",
+            "Year": "1995",
+            "imdbID": "tt0113312",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+        }
+;
 
 const imagesLoaded = ref(false);
 
@@ -49,6 +61,18 @@ onMounted(() => {
       </template>
     </Carousel>
   </div>
+  <div class="movies-cont">
+      <div class="text-mov">
+        <h2>Peliculas </h2>
+        <hr>
+      </div>
+      <div class="movies-card-container">
+        <CardMovie :movie="movie"/>
+      </div>
+  </div>
+
+
+
 </div>
 </template>
 
@@ -60,6 +84,7 @@ onMounted(() => {
   border: 1px solid white;
   border-radius: 12px;
   overflow: hidden;
+ order: 2;
 }
 
 .carrousel-contain {
@@ -167,4 +192,39 @@ onMounted(() => {
     left: 25%;
   }
 }
+
+.movies-cont{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.text-mov{
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: calc(0.7em + 1vw);
+  flex-direction: row;
+  gap: 20px;
+  
+}
+.text-mov hr{
+    width: 80%;
+    border: 2px solid rgba(127, 255, 212, 0.678); 
+    filter: drop-shadow(0 2px 2px rgb(127, 255, 212)); 
+  }
+
+  .movies-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
 </style>
