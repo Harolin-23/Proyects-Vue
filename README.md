@@ -31,6 +31,7 @@ Mi objetivo es avanzar en el dominio de Vue.js, desde lo más básico hasta lleg
 
 ### Liks de los proyectos desplegados(Temporal)
 - [Web Riwi](https://webriwi.onrender.com)
+- [PelisVue](https://pelisvue.onrender.com)
 
 inicia clonando con este link:
 ```bash
