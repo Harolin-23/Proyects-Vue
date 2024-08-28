@@ -5,7 +5,7 @@
                 <h2>Pelis Vue</h2>
         </div>
         <div class="search-box">
-            <input type="text" placeholder="Searh your movies for exmple 'badman' ro series ">
+            <input type="text" placeholder="Searh your movies">
         </div>
         <div class="prefencs-user">
             <p><i class="fa-solid fa-user-astronaut"></i><div class="resp-l">Login</div></p>
@@ -162,10 +162,14 @@ export default {
 @media screen and (max-width: 1298px) {
     header{
         gap: 10px;
+        order: 1;
+        z-index: 100000000000;
     }
     .resp-l{
         display: none;
     }
+     
+
 
       .prefencs-user{
         width: 10%;
@@ -194,6 +198,9 @@ export default {
 
     .search-box{
         width: 50%;
+        input{
+        font-size: calc(0.8em + 1vw) !important;
+      }
     }
 
 
@@ -203,11 +210,20 @@ export default {
     .country-select{
         display: none;
     }
+    .search-box{
+        width: 60%;
+        input{
+       text-align: center;
+       font-size: calc(1em + 1vw) !important;
+      }
+    }
 
     .prefencs-user{
-        width: 30%;
+        width: 20%;
     }
-  
+    .logo{
+        width: 5%;
+    }
 }
 
 
