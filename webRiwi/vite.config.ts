@@ -3,9 +3,8 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/Proyects-Vue/webRiwi/',
+  base: './', // Ruta base para archivos estáticos
   build: {
     outDir: 'dist',
   }
-  
 })
