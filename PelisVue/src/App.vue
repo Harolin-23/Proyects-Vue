@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Header from './components/header/header.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { Carousel, Pagination, Slide } from 'vue3-carousel';
 
 import 'vue3-carousel/dist/carousel.css';
@@ -14,16 +14,32 @@ const slides = ref([
   { id: 6, image: 'https://wallpaperaccess.com/full/1534439.jpg', text: 'Texto 6' },
   { id: 7, image: 'https://wallpaperaccess.com/full/1453793.jpg', text: 'Texto 7' },
 ]);
+
+const imagesLoaded = ref(false);
+
+onMounted(() => {
+  const imagePromises = slides.value.map(slide => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.src = slide.image;
+      img.onload = resolve;
+    });
+  });
+
+  Promise.all(imagePromises).then(() => {
+    imagesLoaded.value = true;
+  });
+});
 </script>
 
 <template>
 <div class="container-web">
   <Header />
-  <div class="carrousel-contain">
+  <div class="carrousel-contain" v-if="imagesLoaded">
     <Carousel :autoplay="5000" :wrap-around="true" class="custom-carousel">
       <Slide v-for="slide in slides" :key="slide.id">
         <div class="carousel__item">
-          <img :src="slide.image" :alt="slide.text" class="carousel__image">
+          <img :src="slide.image" :alt="slide.text" class="carousel__image" loading="lazy">
           <p class="carousel__text">{{ slide.text }}</p>
         </div>
       </Slide>
@@ -44,7 +60,6 @@ const slides = ref([
   border: 1px solid white;
   border-radius: 12px;
   overflow: hidden;
-  
 }
 
 .carrousel-contain {
@@ -54,7 +69,7 @@ const slides = ref([
   justify-content: center;
   align-items: center;
   padding-top: 6%;
-  padding-left: 2%
+  padding-left: 2%;
 }
 
 .carousel__item {
@@ -64,21 +79,18 @@ const slides = ref([
   cursor: grab;
 }
 
-  .carousel__pagination{
-    position: absolute;
-    left: 45%;
-    bottom: 12px;
-    background-color: rgba(121, 121, 121, 0.411);
-    backdrop-filter: blur(12px);
-  
-  }
+.carousel__pagination {
+  position: absolute;
+  left: 45%;
+  bottom: 12px;
+  background-color: rgba(121, 121, 121, 0.411);
+  backdrop-filter: blur(12px);
+}
 
-  .carousel__pagination li{
-      color: white !important;
-      z-index: 20;
-    }
-
-
+.carousel__pagination li {
+  color: white !important;
+  z-index: 20;
+}
 
 .carousel__image {
   width: 100%;
@@ -86,7 +98,6 @@ const slides = ref([
   object-fit: contain;
   object-position: center -100px;
   margin-left: 20.7px;
-  
 }
 
 .carousel__text {
@@ -102,7 +113,7 @@ const slides = ref([
   display: none;
 }
 
-.carousel__item p{
+.carousel__item p {
   position: absolute;
   top: 50%;
   right: 20%;
@@ -110,67 +121,50 @@ const slides = ref([
   font-size: 2em;
   color: #000000 !important;
   padding: 10px;
-
 }
 
 @media screen and (max-width: 996px) {
-  .custom-carousel{
+  .custom-carousel {
     height: 200px;
   }
-  .carousel__pagination{
+  .carousel__pagination {
     left: 30%;
   }
 }
 
 @media screen and (max-width: 1298px) {
-  .carrousel-contain{
+  .carrousel-contain {
     padding-top: 10%;
   }
   .carousel__image {
     object-position: center center;
   }
-  .carousel__pagination{
+  .carousel__pagination {
     left: 40%;
   }
-
-
 }
 
-
-
 @media screen and (max-width: 827px) {
-  .carrousel-contain{
+  .carrousel-contain {
     padding-top: 15%;
   }
 }
 
-
 @media screen and (max-width: 527px) {
-  .carrousel-contain{
+  .carrousel-contain {
     padding-top: 25%;
-   
   }
-  .custom-carousel{
+  .custom-carousel {
     height: 200px;
-     border: none;
+    border: none;
   }
   .carousel__image {
     object-position: 10px center !important;
     margin-left: 0px;
     border-radius: 12px;
-
-    img{
-      border-radius: 12px;
-    }
   }
-
-  .carousel__pagination{
+  .carousel__pagination {
     left: 25%;
   }
-
-
 }
-
-
-
 </style>
