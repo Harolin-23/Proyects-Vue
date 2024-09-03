@@ -94,4 +94,26 @@ p {
     color: white
 }
 
+@media screen and (max-width: 590px) {
+
+    .movies-card-container{
+  
+        align-items: center !important;
+        margin: 0px;
+        padding-left: 10%;
+        display: flex !important;
+        gap: 0px;
+    }
+
+    .card-movie{
+        height: 500px;
+        width: 100%;
+       
+    }
+
+
+
+
+}
+
 </style>
