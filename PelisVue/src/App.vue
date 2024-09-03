@@ -19,7 +19,7 @@ const slides = ref([
 
 const movie = 
         {
-            "Title": "Hola, ¿estás sola?",
+            "Title": "Batman Begins",
             "Year": "1995",
             "imdbID": "tt0113312",
             "Type": "movie",
@@ -71,6 +71,8 @@ onMounted(() => {
       <div class="movies-card-container">
         <CardMovie :movie="movie"/>
         <CardMovie :movie="movie"/>
+        <CardMovie :movie="movie"/>
+        <CardMovie :movie="movie"/>
       </div>
   </div>
 </div>
@@ -116,6 +118,7 @@ onMounted(() => {
 .carousel__pagination li {
   color: white !important;
   z-index: 20;
+  border-radius: 12px;
 }
 
 .carousel__image {
@@ -240,7 +243,7 @@ onMounted(() => {
   .movies-card-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     padding-top: 20px;
     padding-left: 20px;
   }
